@@ -1,4 +1,4 @@
-# entry-assignment-for-cyberia
+# Entry Assignment For Cyberia
 As the name says
 
 ## Highlights
