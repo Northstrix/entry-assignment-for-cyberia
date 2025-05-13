@@ -98,7 +98,7 @@ I assume you already have Node.js and npm installed.
 
 7. Access the dashboard:
 
-    - Open `/owner-dashboard` in your browser.
+    - Open the `/owner-dashboard` route.
 
 8. Create owner account:
 
