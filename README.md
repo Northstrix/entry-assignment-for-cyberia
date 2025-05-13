@@ -1,75 +1,110 @@
-# Nuxt Minimal Starter
+# entry-assignment-for-cyberia
+As the name says
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Highlights
+ - Localization support for English, Hebrew, and Russian
 
-## Setup
+ - Responsive navbar optimized for desktop and mobile
 
-Make sure to install dependencies:
+ - Breadcrumbs with adjustable spacing between page name and separator (5px desktop, 4px mobile)
 
-```bash
-# npm
-npm install
+ - Background with subtle noise and slight center lightening
 
-# pnpm
-pnpm install
+ - Right-to-left (RTL) layout support
 
-# yarn
-yarn install
+ - Bento-style image grid using Aceternity’s Focus Card component
 
-# bun
-bun install
-```
+ - Dedicated image container for mobile view
 
-## Development Server
+ - Pinia store managing current language and active category; preserves filters and language selection across navigation and reloads; sets layout direction (LTR/RTL) based on language
 
-Start the development server on `http://localhost:3000`:
+ - SVG-based inputs and checkboxes for desktop
 
-```bash
-# npm
-npm run dev
+ - Floating label inputs re-render on window resize (desktop)
 
-# pnpm
-pnpm dev
+ - Typography adjustments with customized letter-spacing on inscriptions
 
-# yarn
-yarn dev
+ - Secure response collection using ML-KEM-1024, ChaCha20, Serpent-256 CBC, HMAC-SHA512, integrated with Firebase
 
-# bun
-bun run dev
-```
+ - Code formatting using ESLint
 
-## Production
+## How to run
 
-Build the application for production:
+I assume you already have Node.js and npm installed.
 
-```bash
-# npm
-npm run build
 
-# pnpm
-pnpm build
+1. Clone the repository using the command:
 
-# yarn
-yarn build
+    ```
+    git clone https://github.com/Northstrix/entry-assignment-for-cyberia
+    ```
 
-# bun
-bun run build
-```
+2. Open the project:
 
-Locally preview production build:
+    - Open the cloned folder in VS Code or any IDE of your choice.
 
-```bash
-# npm
-npm run preview
+3. Configure Firebase:
 
-# pnpm
-pnpm preview
+    - Open `plugins/firebase.client.ts`.
+    - Create a Firebase instance with Authentication and Firestore Database enabled.
+    - Create a new web app in the Firebase instance.
+    - Replace the mock credentials in `firebase.client.ts` with your actual Firebase credentials and save the file.
 
-# yarn
-yarn preview
+4. Set Firestore rules:
 
-# bun
-bun run preview
-```
+    - Apply the following rules to your Firestore database:
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+      ```
+      rules_version = '2';
+      service cloud.firestore {
+        match /databases/{database}/documents {
+      
+          // Anyone can create, only owner can read or delete
+          match /data/{userEmail}/receivedResponses/{document=**} {
+            allow create: if true;
+            allow read, delete: if request.auth != null && request.auth.token.email == userEmail;
+          }
+      
+          // Public folder: anyone can read, only owner can write or delete
+          match /data/{userEmail}/public/{document=**} {
+            allow read: if true;
+            allow write, delete: if request.auth != null && request.auth.token.email == userEmail;
+          }
+      
+          // Private folder: only owner can read, write, or delete
+          match /data/{userEmail}/private/{document=**} {
+            allow read, write, delete: if request.auth != null && request.auth.token.email == userEmail;
+          }
+      
+          // Default deny
+          match /{document=**} {
+            allow read, write, delete: if false;
+          }
+        }
+      }
+      ```
+
+5. Install dependencies by running:
+
+    ```
+    npm install
+    ```
+
+6. Start the development server with:
+
+    ```
+    npm run dev -- --host 0.0.0.0
+    ```
+
+7. Access the dashboard:
+
+    - Open `/owner-dashboard` in your browser.
+
+8. Create owner account:
+
+    - Create an account with the email `server-owner@whatever.xyz` and a password of your choice.
+
+9. Done:
+
+    - The web app is now functional.
+    - Visitors can submit responses, and the owner can access them.
