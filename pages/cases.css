@@ -1,0 +1,87 @@
+.category-list-wrapper {
+  margin-bottom: 52px;
+}
+@media (max-width: 800px) {
+  .category-list-wrapper {
+    margin-bottom: 40px;
+  }
+}
+.image-grid-spacer {
+  height: 110px;
+}
+@media (max-width: 800px) {
+  .image-grid-spacer {
+    height: 48px;
+  }
+}
+/* --- Only the new styles for the inquiry section below --- */
+.project-inquiry-desktop {
+  margin-top: 102px;
+  margin-bottom: 0;
+  font-size: var(--project-inquiry-desktop-font-size);
+  font-weight: var(--project-inquiry-desktop-font-weight);
+  color: var(--project-inquiry-desktop-color);
+  text-align: left;
+  direction: ltr;
+  line-height: 1.15;
+}
+.project-inquiry-desktop.rtl {
+  text-align: right;
+  direction: rtl;
+}
+.project-inquiry-desktop .line1 {
+  display: block;
+  font-weight: 500;
+  padding-bottom: 3px;
+  margin-bottom: var(--project-inquiry-desktop-line-gap);
+}
+.project-inquiry-desktop .line2 {
+  display: block;
+  font-weight: 500;
+  margin-top: var(--project-inquiry-desktop-line-gap);
+}
+@media (max-width: 800px) {
+  .project-inquiry-desktop {
+    display: none;
+  }
+}
+
+/* --- BentoGrid Styles for Inquiry Inputs --- */
+.bento-inquiry-form {
+  margin-top: 90px;
+  width: 100%;
+}
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 40px;
+}
+.bento-item {
+  min-width: 0;
+}
+.bento-message {
+  grid-column: 1 / span 3;
+}
+
+/* --- New styles for checkbox and button below the grid --- */
+.inquiry-actions {
+  margin-top: 41px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+}
+.inquiry-checkbox {
+  display: flex-end;
+  justify-content: flex-start;
+  margin-bottom: 66px;
+}
+.project-inquiry-desktop.rtl .inquiry-checkbox {
+  justify-content: flex-end;
+}
+.inquiry-chronicle-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -59px;
+}
