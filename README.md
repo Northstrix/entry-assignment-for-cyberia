@@ -108,3 +108,35 @@ I assume you already have Node.js and npm installed.
 
     - The web app is now functional.
     - Visitors can submit responses, and the owner can access them.
+
+## Credit
+
+The existence of this project (at least in its current form) wouldn't've been possible without the following:
+
+[Bento Grid](https://ui.aceternity.com/components/bento-grid) by [Aceternity UI](https://ui.aceternity.com/)
+
+[Focus Cards](https://ui.aceternity.com/components/focus-cards) by [Aceternity UI](https://ui.aceternity.com/)
+
+[Text Hover Effect](https://ui.aceternity.com/components/text-hover-effect) by [Aceternity UI](https://ui.aceternity.com/)
+
+[Chronicle Button](https://codepen.io/Haaguitos/pen/OJrVZdJ) by [Haaguitos](https://codepen.io/Haaguitos)
+
+[Input Floating Label animation](https://codepen.io/Mahe76/pen/qBQgXyK) by [Elpeeda](https://codepen.io/Mahe76)
+
+[hash-wasm](https://github.com/Daninet/hash-wasm) by [Daninet](https://github.com/Daninet)
+
+[mipher](https://github.com/mpaland/mipher) by [mpaland](https://github.com/mpaland)
+
+[crystals-kyber-js](https://github.com/dajiaji/crystals-kyber-js) by [dajiaji](https://github.com/dajiaji)
+
+[firebase-js-sdk](https://github.com/firebase/firebase-js-sdk) by [firebase](https://github.com/firebase/firebase-js-sdk)
+
+[Daily UI#011 | Flash Message (Error/Success)](https://codepen.io/juliepark/pen/vjMOKQ) by [Julie Park](https://codepen.io/juliepark)
+
+[すりガラスなプロフィールカード](https://codepen.io/ash_creator/pen/zYaPZLB) by [あしざわ - Webクリエイター](https://codepen.io/ash_creator)
+
+[Perplexity](https://www.perplexity.ai/)
+
+Used [Namer UI](https://namer-ui.netlify.app/) component:
+
+- Fancy Notification
