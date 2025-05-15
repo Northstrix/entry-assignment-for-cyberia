@@ -138,3 +138,5 @@ The existence of this project (at least in its current form) wouldn't've been po
 [Perplexity](https://www.perplexity.ai/)
 
 Used [Namer UI](https://namer-ui.netlify.app/) component: Fancy Notification
+
+[チェックしないと押せないボタン](https://codepen.io/ash_creator/pen/JjZReNm) by [あしざわ - Webクリエイター](https://codepen.io/ash_creator)
