@@ -2,7 +2,7 @@
 As the name says
 
 ## Highlights
- - Localization support for English, Hebrew, and Russian
+ - English, Hebrew, and Russian localizations
 
  - Responsive navbar optimized for desktop and mobile
 
@@ -102,7 +102,7 @@ I assume you already have Node.js and npm installed.
 
 8. Create owner account:
 
-    - Create an account with the email `server-owner@whatever.xyz` and a password of your choice.
+    - Create an account with the `server-owner@whatever.xyz` email and a password of your choice.
 
 9. Done:
 
@@ -135,8 +135,8 @@ The existence of this project (at least in its current form) wouldn't've been po
 
 [すりガラスなプロフィールカード](https://codepen.io/ash_creator/pen/zYaPZLB) by [あしざわ - Webクリエイター](https://codepen.io/ash_creator)
 
+[チェックしないと押せないボタン](https://codepen.io/ash_creator/pen/JjZReNm) by [あしざわ - Webクリエイター](https://codepen.io/ash_creator)
+
 [Perplexity](https://www.perplexity.ai/)
 
 Used [Namer UI](https://namer-ui.netlify.app/) component: Fancy Notification
-
-[チェックしないと押せないボタン](https://codepen.io/ash_creator/pen/JjZReNm) by [あしざわ - Webクリエイター](https://codepen.io/ash_creator)
